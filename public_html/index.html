@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Ejemplo de json</title>
+      <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+       
+      <script>
+         $(document).ready(function() {
+           
+            $("#boton").click(function(event){
+               $.getJSON('nuevo.json', function(objeto) {
+                  $('#salida').html('<p> Dolar: ' + objeto.Dolar + '</p>');
+                  $('#salida').append('<p> Yen : ' + objeto.Yen+ '</p>');
+                  $('#salida').append('<p> Euro: ' + objeto.Euro+ '</p>');
+               });
+            });
+               
+         });
+      </script>
+   </head>
+   
+   <body>
+   
+      <p>Click para cargar el archivo:</p>
+       
+      <div id = "salida" style = "background-color:lightgray;">
+         Datos
+      </div>
+       
+      <input type = "button" id = "boton" value = "Load Data" />
+       
+   </body>
+</html>

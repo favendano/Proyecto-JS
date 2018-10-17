@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Prueba regExp</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+        <script>
+            
+            function control()
+            {
+                
+                $(document).ready(function(){
+                
+                str=$("#nombre").val();
+                
+                patt2 = /^[A-Z]/g;
+                
+                result2 = patt2.test(str);
+                
+                if (!result2)
+                {
+                    alert("Error en el nombre");
+                }
+                 });
+
+                
+                $(document).ready(function(){
+                
+                str=$("#telefono").val();
+                
+                patt2 = /^[0-9]{9}$/g;
+                
+                result2 = patt2.test(str);
+                
+                if (!result2)
+                {
+                    alert("Error en el teléfono");
+                }
+                
+                 });
+            }
+            
+            
+            
+        </script>
+    </head>
+    <body>
+        <form action="pepe.php" method="POST">
+          <p >  Ingrese un Nombre<input type="text" id="nombre"></p>
+          <p >  Ingrese un Teléfono<input type="text" id="telefono"></p>
+          
+          <input type="submit" onclick="control()" value="Enviar">
+          
+        </form>
+        
+
+    </body>
+</html>

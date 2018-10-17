@@ -1,0 +1,6 @@
+{
+		"A1":{"valor":"100", "color":"azul", "caracteristica":{"tipo":"S1","ref":"MMM"}},
+		"A2":{"valor":"110", "color":"rojo", "caracteristica":{"tipo":"S2","ref":"NNN"}},
+		"A3":{"valor":"120", "color":"negro", "caracteristica":{"tipo":"S3","ref":"OOO"}},
+		"A4":{"valor":"90", "color":"verde", "caracteristica":{"tipo":"S4","ref":"PPP"}}
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Ejemplo de json</title>
+      <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+       
+      <script>
+         $(document).ready(function() {
+           
+            $("#boton").click(function(event){
+               $.getJSON('result.json', function(nombre, apellidos,telefono) {
+                  $('#salida').html('<p> Nombre: ' + nombre + '</p>');
+                  $('#salida').append('<p>Apellidos : ' + apellidos+ '</p>');
+                  $('#salida').append('<p> Teléfono: ' + telefono+ '</p>');
+               });
+            });
+            var arreglo=[1,2,3];
+             $("#boton1").click(function(event){
+               $.setJSON(      getJSON('result.json', function(nombre, apellidos,telefono) {
+                  $('#salida').html('<p> Nombre: ' + nombre + '</p>');
+                  $('#salida').append('<p>Apellidos : ' + apellidos+ '</p>');
+                  $('#salida').append('<p> Teléfono: ' + telefono+ '</p>');
+               });
+            });
+               
+         });
+      </script>
+   </head>
+   
+   <body>
+   
+      <p>Click para cargar el archivo:</p>
+       
+      <div id = "salida" style = "background-color:lightgray;">
+         Datos
+      </div>
+       
+      <input type = "button" id = "boton" value = "cargar datos" />
+      
+      <input type = "button" id = "boton1" value = "crear archivo" />
+      <a href="result.json" download>bajar archivo</a>
+       
+   </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+        <script>
+            
+            function devuelveCp() {
+                
+            var codPost =[28001,28002,28003], 
+                localidad =["Sol", "Atocha", "Chueca" ], 
+                provincia =["Madrid", "Madrid", "madrid" ];
+            
+            for (i=0;i<3;i++)
+            {
+            if (codPost[i] == Number(($("#cp").val().trim())))
+            { 
+              $("#localidad").val(localidad[i]);
+              $("#provincia").val(provincia[i]); 
+                
+            }
+            }
+        }
+            
+            
+        </script>
+    </head>
+    <body>
+        <form>
+            
+            <p>
+                Ingrese el código postal <input id="cp" type="text" onfocusout="devuelveCp()">
+            </p>
+            <p>
+                Ingrese el código postal <input id="localidad" type="text" >
+            </p>
+            <p>
+                Ingrese el código postal <input id="provincia" type="text" >
+            </p>
+            
+            
+            
+        </form>
+    </body>
+</html>

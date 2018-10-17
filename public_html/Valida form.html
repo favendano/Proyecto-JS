@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script language="JavaScript" type="text/JavaScript">
+
+function valida_envia(){
+if(document.frm.nombre.value == "") {
+alert("Por favor indique Su Nombre");
+document.frm.nombre.focus();
+return 0;
+}
+
+if(document.getElementById("poblacion").value == "") {
+alert("Por favor indique Su Ciudad");
+document.frm.poblacion.focus();
+return 0;
+}
+alert("Muchas gracias por enviar el formulario");
+document.getElementById("frm").submit();
+return true;
+}
+</script>
+
+    </head>
+    <body>
+        
+    <form action="pagina.php" method="post" name="frm" id="frm"> 
+        Nombre<input type="text" name = "nombre" id="nombre">
+        Nombre<input type="text" id="poblacion">
+        <input type="button" value="Enviar" onclick="valida_envia()" />
+    </form>    
+        <div>TODO write content</div>
+    </body>
+</html>

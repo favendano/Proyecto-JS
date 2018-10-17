@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <style>
+    /* estilo para borde de tabla y filas de tabla     */
+    .bordes{
+        border-color:black; border-width: 1px; border-style:solid}
+    
+    /* estilo para borde de celdas y tamaño de las mismas     */
+    .celdas
+        {border-color:black; border-width: 1px; border-style:solid; width: 70px; height: 50px;}
+    
+    </style>
+<script>
+
+//controlo que el documento se haya cargado
+$(function(){
+
+//agrego dos divs
+
+$("body").append("<div>Esto es un texto</div>");
+$("body").append("<div>esto es otro texto</div>");
+//agrego dos br
+for (i=0;i<=2;i++)
+{$("body").append("<br>");}
+
+//creo una tabla de 5X5
+$("body").append("<table></table>");
+$("table").addClass("bordes")
+for (i=0;i<5;i++)
+    {$("table").append("<tr></tr>");
+    $("tr").addClass("bordes") ; } 
+for (i=0;i<5;i++)
+    {$("tr").append("<td>celda "+i+" </td>");
+    $("td").addClass("celdas")};
+
+//agrego un br
+$("body").append("<br>");
+
+//agrego un boton
+$("body").append("<button>Este boton no hace nada</button> ");
+
+
+})
+</script>
+
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>

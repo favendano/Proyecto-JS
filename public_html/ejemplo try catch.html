@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Ejemplo errores</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+    <body>
+<p>Please input a number between 5 and 10:</p>
+
+<input id="demo" type="text">
+<button type="button" onclick="myFunction()">Probar entrada</button>
+<p id="p01"></p>
+
+<script>
+function myFunction()
+{
+    var message, x;
+    
+    message = document.getElementById("p01");
+    message.innerHTML = "";
+    x = document.getElementById("demo").value;
+    try { 
+        if(x == "") throw "vacío";
+        if(isNaN(x)) throw "no es un numero";
+        x = Number(x);
+        if(x < 5) throw "muy bajo";
+        if(x > 10) throw "muy alto";
+    }
+    catch(err) {
+        message.innerHTML = "la entrada es " + err;
+    }
+}
+</script>
+    </body>
+</html>

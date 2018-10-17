@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Leer recursivamente un json bidimensional</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+ 
+	<script>
+//	var miJSON={
+//		"A1":{"valor":"100", "color":"azul", "caracteristica":{"tipo":"S1","ref":"MMM"}},
+//		"A2":{"valor":"110", "color":"rojo", "caracteristica":{"tipo":"S2","ref":"NNN"}},
+//		"A3":{"valor":"120", "color":"negro", "caracteristica":{"tipo":"S3","ref":"OOO"}},
+//		"A4":{"valor":"90", "color":"verde", "caracteristica":{"tipo":"S4","ref":"PPP"}},
+//	}
+// 
+//	$(document).ready(function(){
+//		$.each(miJSON, function(i,item){
+//			document.write("<br>"+i+" - "+miJSON[i].valor+" - "+miJSON[i].color+" - "+miJSON[i].caracteristica.tipo+" - "+miJSON[i].caracteristica.ref);
+//		})
+//	})
+        	var miJSON={
+		"A1":{"valor":"100", "color":"azul", "caracteristica":{"tipo":"S1","ref":"MMM"}},
+		"A2":{"valor":"110", "color":"rojo", "caracteristica":{"tipo":"S2","ref":"NNN"}},
+		"A3":{"valor":"120", "color":"negro", "caracteristica":{"tipo":"S3","ref":"OOO"}},
+		"A4":{"valor":"90", "color":"verde", "caracteristica":{"tipo":"S4","ref":"PPP"}},
+	}
+ 
+	$(document).ready(function(){
+		$.each(miJSON, function(i,item){
+			document.write("<br>"+i+" - "+miJSON[i].valor+" - "+miJSON[i].color+" - "+miJSON[i].caracteristica.tipo+" - "+miJSON[i].caracteristica.ref);
+		})
+	})
+	</script>
+</head>
+<body>
+ 
+</body>
+</html>
